@@ -20,7 +20,7 @@
   --hue: 180;
   --first-color: hsla(32, 90%, 49%, 0.877);
   --first-color-alt: hsl(var(--hue), 80%, 44%);
-  --second-color: hsl(182, 82%, 51%);
+  --second-color: hsla(180, 93%, 63%, 0.918);
   --black-color: hsl(var(--hue), 4%, 8%);
   --gray-color: hsl(var(--hue), 4%, 50%);
   --body-color: hsl(30, 100%, 0%);
