@@ -18,7 +18,7 @@
       -> Copy the color mode (HSL)
   */
   --hue: 180;
-  --first-color: hsla(27, 90%, 49%, 0.877);
+  --first-color: hsla(32, 90%, 49%, 0.877);
   --first-color-alt: hsl(var(--hue), 80%, 44%);
   --second-color: hsl(182, 82%, 51%);
   --black-color: hsl(var(--hue), 4%, 8%);
@@ -255,7 +255,7 @@ img {
   align-items: flex-end;
   justify-content: center;
   border: 5px solid var(--first-color);
-  box-shadow: 0 8px 32px hsl(var(--hue), 80%, 40%, .3);
+  box-shadow: 0 8px 32px hsla(32, 90%, 49%, .6);;
 }
 
 .home__img{
