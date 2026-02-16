@@ -1,6 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wswapght@200..900&display=");
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Bungee&family=Comic+Relief:wght@400;700&family=Federant&family=Unbounded:wght@200..900&display=swap');
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
@@ -28,7 +28,7 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Unbounded", sans-serif;
+  --body-font: "Bungee", sans-serif;
   --bigger-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -90,6 +90,8 @@ button {
 h1, h2, h3, h4 {
   font-weight: var(--font-semi-bold);
 }
+
+
 
 ul {
   list-style: none;
@@ -185,13 +187,16 @@ img {
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
+  border: 2px var(--first-color) dotted;
+  padding: 0 20px 0 ;
 }
 
 .nav__link{
   position: relative;
   color:var(--second-color);
-  font-weight: var(--font-medium);
-  transition: color .4s, width .4s;
+  font-size: 20px;
+  /*transition: color .4s, width .4s;*/
+  font-family:"Bitcount Grid Double", system-ui ;
 }
 
 .nav__link::after{
@@ -208,11 +213,11 @@ img {
 .nav__link:hover{
   color: var(--first-color);
 }
-
+/*
 .nav__link:hover::after{
   width: 100%;
 }
-
+*/
 .nav__close{
   position: absolute;
   top : 1rem;
@@ -224,6 +229,9 @@ img {
 /* Show menu */
 .show-menu{
   top:0;
+  width: 80%;
+  position: relative;
+  margin: auto;
 }
 
 /* Add shadow header */
@@ -248,18 +256,21 @@ img {
 .home__image{
   width: 240px;
   height: 240px;
-  background-color: var(--second-color);
+  
+
   border-radius: 50%;
   overflow: hidden;
   display: flex;
-  align-items: flex-end;
+  align-items:flex-start;
   justify-content: center;
   border: 5px solid var(--first-color);
-  box-shadow: 0 8px 32px hsla(32, 90%, 49%, .6);;
+  box-shadow: 0 8px 32px hsla(32, 90%, 49%, .6);
 }
 
 .home__img{
+  
   width: 200px;
+  transform: scale(1.5) translateY(35px) translateX(-5px);
 }
 
 .home__social{
