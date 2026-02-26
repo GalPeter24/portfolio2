@@ -46,6 +46,9 @@
                   <li>
                      <a href="#contact" class="nav__link">Contact</a>
                   </li>
+                   <li>
+                     <p class="nav__link" onclick="mode()">mode</p>
+                  </li>
                </ul>
                <div id="nav-close" class="nav__close nav-dot" >
                   <i class="ri-close-line"></i>
@@ -67,14 +70,14 @@
                      <img src="/1000007473.png" alt="image" class="home__img">
                   </div>
                   <div class="home__social">
-                     <a class="home__link" target="_blank" href="https://www.linkedin.com/">
-                        
+                     <a class="home__link" target="_blank" href="https://www.instagram.com">
+                           <i class="ri-instagram-line"></i>
                      </a>
                       <a class="home__link" target="_blank" href="https://github.com/">
                         <i class="ri-github-fill"></i>
                      </a>
-                      <a class="home__link" target="_blank" href="https://dribbble.com/">
-                        
+                      <a class="home__link" target="_blank" href="https://www.facebook.com">
+                        <i class="ri-facebook-circle-fill"></i>
                      </a>
                   </div>
                </div>
@@ -95,60 +98,111 @@
          </section>
 
          <!--==================== ABOUT ====================-->
- 
-                <article class="project__card">
-                  <img src="/portfolio_en/PixelKnightIkon.png" alt="" class="projects__img">
-                  <div class="projects__data">
-                     <h1 class="projects__title">Pixel Knight</h1>
-                     <p class="project__description">Creation, design and development of a website for a user.</p>
-                     <a href="#" target="_blank" class="button button__ghost">View Project</a>
+                  <section class="about section" id="about">
+            <div class="about__container container grid">
+               <div class="about__content">
+                  <div class="about__data">
+                     <h2 class="section__title">About me</h2>
+                     <p class="about__description">
+                        I am a web developer and designer specializing in creating 
+                        modern, functional, and visually appealing websites. I combine 
+                        creativity and functionality to transform ideas into intuitive 
+                        interfaces, balancing design, usability, and quality code.
+                     </p>
+                     <a href="" class="button button__ghost">Contact me</a>
                   </div>
-               </article>
-               <article class="project__card">
-                  <img src="/Gemini_Generated_Image_f13ae3f13ae3f13a.png" alt="" class="projects__img">
-                  <div class="projects__data">
-                     <h1 class="projects__title">Mars Rover</h1>
-                     <p class="project__description">Creation, design and development of a website for a user.</p>
-                     <a href="#" target="_blank" class="button button__ghost">View Project</a>
+                  <div class="about__skills">
+                     <h3 class="about__subtitle">
+                        <i class="ri-bookmark-fill"></i>
+                        <span>Skills</span>
+                     </h3>
+                     <ul class="about__items">
+                        <li class="about__item">HTML</li>
+                        <li class="about__item">CSS</li>
+                        <li class="about__item">JavaScript</li>
+                        <li class="about__item">C#</li>
+                        <li class="about__item">WPF</li>
+                        <li class="about__item">NextJS</li>
+                        <li class="about__item">Git</li>
+                        <li class="about__item">GitHub</li>
+                        <li class="about__item">Figma</li>
+                     </ul>
                   </div>
-               </article>
-               <article class="project__card">
-                  <img src="/portfolio_en/PixelKnightIkon.png" alt="" class="projects__img">
-                  <div class="projects__data">
-                     <h1 class="projects__title">IA Website & Design</h1>
-                     <p class="project__description">Creation, design and development of a website for a user.</p>
-                     <a href="#" target="_blank" class="button button__ghost">View Project</a>
-                  </div>
-               </article>
-                <article class="project__card">
-                  <img src="/portfolio_en/PixelKnightIkon.png" alt="" class="projects__img">
-                  <div class="projects__data">
-                     <h1 class="projects__title">IA Website & Design</h1>
-                     <p class="project__description">Creation, design and development of a website for a user.</p>
-                     <a href="#" target="_blank" class="button button__ghost">View Project</a>
-                  </div>
-               </article>
-
-
-
+               </div>
+               <div class="about__image">
+                  <img src="assets/img/about-perfil.png" alt="image" class="about__img">
+               </div>
             </div>
          </section>
+
+  <!--==================== PROJECTS ====================-->
+        <section class="projects section" id="projects">
+    <h2 class="section__title">Projects</h2>
+
+    <div id="projects__wrapper">
+        <button class="nav-btn__prev" onclick="moveSlide(-1)"><i class="ri-arrow-left-s-line"></i></button>
+
+        <div class="projects__container">
+            <div class="projects__items" id="slider">
+                
+                <article class="project__card">
+                    <img src="/PixelKnight.png" alt="" class="projects__img">
+                    <div class="projects__data">
+                        <h1 class="projects__title">Pixel Knight</h1>
+                        <p class="project__description">A knight game with pixel design.</p>
+                        <a href="https://github.com/GalPeter24/pixel_knight__.git" target="_blank" class="button button__ghost">View Project</a>
+                    </div>
+                </article>
+
+                <article class="project__card">
+                    <img src="/MarsRover.png" alt="" class="projects__img">
+                    <div class="projects__data">
+                        <h1 class="projects__title">Mars Rover</h1>
+                        <p class="project__description">Our project for the Vadász Dénes programing competition.</p>
+                        <a href="https://github.com/GalPeter24/MarsRover.git" target="_blank" class="button button__ghost">View Project</a>
+                    </div>
+                </article>
+
+                <article class="project__card">
+                    <img src="/ArenaGlory.png" alt="" class="projects__img">
+                    <div class="projects__data">
+                        <h1 class="projects__title">Gladiator game</h1>
+                        <p class="project__description">A gladiator game which played in th Colusseum.</p>
+                        <a href="https://github.com/GalPeter24/ArenaGlory.git" target="_blank" class="button button__ghost">View Project</a>
+                    </div>
+                </article>
+
+                <article class="project__card">
+                    <img src="/" alt="" class="projects__img">
+                    <div class="projects__data">
+                        <h1 class="projects__title">IA Website & Design</h1>
+                        <p class="project__description">Creation, design and development of a website for a user.</p>
+                        <a href="#" target="_blank" class="button button__ghost">View Project</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <button class="nav-btn__next" onclick="moveSlide(1)"><i class="ri-arrow-right-s-line"></i></button>
+    </div>
+</section>
 
          <!--==================== RESUME ====================-->
          <section class="resume section" id="resume">
             
-         </section>
+            
 
+         </section>
          <!--==================== CONTACT ====================-->
          <section class="contact section" id="contact">
-<section class="contact section" id="contact">
             <h2 class="section__title">Contact Me</h2>
             <div class="contact__container container grid">
                <form action="" class="contact__form grid" id="contact-form">
                   <input placeholder="Name" type="text" name="user_name" class="contact__input">
                   <input placeholder="Email" name="user_email" class="contact__input">
                   <textarea placeholder="Write your message here..." class="contact__input contact__area" name="user_message"></textarea>
-                  <button type="submit" class="button">Send message</button>
+                  <button type="submit" class="button" onclick="sendMessage()">Send message</button>
                   <p class="contact__message" id="contact-message"></p>
                </form>
                <div class="contact__content grid">
@@ -166,7 +220,9 @@
 
       <!--==================== FOOTER ====================-->
       <footer class="footer">
-         
+         <p>Sources: <br>
+            AI
+         </p>
       </footer>
 
       <!--========== SCROLL UP ==========-->

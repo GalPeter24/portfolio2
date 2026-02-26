@@ -1,13 +1,13 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wswapght@200..900&display=");
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Bungee&family=Comic+Relief:wght@400;700&family=Federant&family=Unbounded:wght@200..900&display=swap');
+
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
 
   /*========== Colors ==========*/
-  /* 
-      Color mode HSL(hue, saturation, lightness)
+  /* Color mode HSL(hue, saturation, lightness)
       Change favorite color:
       Default Cyan: hsl(180, 80%, 48%)
       Blue: hsl(220, 90%, 64%) - Pink: hsl(300, 70%, 64%)
@@ -91,8 +91,6 @@ h1, h2, h3, h4 {
   font-weight: var(--font-semi-bold);
 }
 
-
-
 ul {
   list-style: none;
 }
@@ -166,7 +164,6 @@ img {
   font-size: 1.5rem;
 }
 
-
 /* Navigation for mobile devices */
 @media screen and (max-width:1150px) {
   .nav__menu{
@@ -180,7 +177,6 @@ img {
     transition: top .4s; 
   }
 }
-
 
 .nav__list{
   text-align: center;
@@ -207,24 +203,24 @@ img {
   position: absolute;
   left: 0;
   bottom: -.5rem;
- transition: width .4s;
+  transition: width .4s;
 }
 
 .nav__link:hover{
   color: var(--first-color);
 }
+
 /*
 .nav__link:hover::after{
   width: 100%;
 }
 */
+
 .nav__close{
   position: absolute;
   top : 1rem;
   right: 1.5rem;
 }
-
-
 
 /* Show menu */
 .show-menu{
@@ -241,7 +237,6 @@ img {
 
 /* Active link */
 
-
 /*=============== HOME ===============*/
 .home__container{
   row-gap: 4rem;
@@ -256,8 +251,6 @@ img {
 .home__image{
   width: 240px;
   height: 240px;
-  
-
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -268,7 +261,6 @@ img {
 }
 
 .home__img{
-  
   width: 200px;
   transform: scale(1.5) translateY(35px) translateX(-5px);
 }
@@ -323,13 +315,13 @@ img {
   font-weight: var(--font-medium);
   padding: 1rem 1.5rem;
   border-radius: .5rem;
-  transition: box-shadow .4s  color .4s;
+  transition: box-shadow .4s color .4s;
 }
 
 .button:hover{
   box-shadow: 0 8px 32px hsla(180, 50%, 50%, 0.7);
   background-color: black;
- border: 2px solid var(--second-color);
+  border: 2px solid var(--second-color);
 }
 
 .button__ghost{
@@ -382,13 +374,13 @@ img {
   color: var(--black-color);
   border: 2px solid var(--body-color);
   cursor: default;
-  transition: background-color .4s, border-color .4s
+  transition: background-color .4s, border-color .4s;
 }
 
 .about__item:hover{
   background-color: var(--body-color);
   color: var(--first-color);
-  border-color:var(--first-color)
+  border-color:var(--first-color);
 }
 
 .about__image{
@@ -408,62 +400,101 @@ img {
   width: 200px;
 }
 
-
 /*=============== PROJECTS ===============*/
+/* Mobil-első alapbeállítás (Slider) */
+#projects__wrapper{
+  position: relative;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  max-width: 320px; /* Mobilon ennyire korlátozzuk az ablakot */
+  margin: 0 auto;
+}
 
 .projects__container{
-  row-gap: 2rem;
+  overflow: hidden; 
+  width: 100%;
+  border-radius: 1rem;
+}
+
+#slider{
+  display: flex; 
+  transition: transform 0.5s ease-in-out;
 }
 
 .project__card{
+  min-width: 100%; /* Mobilon egy kártya tölti ki a 320px-et */
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 8px 16px hsla(0, 0, 0, .5);
-  
 }
 
-.project__data{
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-background-color: hsla(var(--hue), 0, 0, .5);
-display: grid;
-place-content: center;
-row-gap: 2rem;
-text-align: center;
-padding: 0 1rem;
-border-radius: 1rem;
-opacity: 0;
-pointer-events: none;
-transition: opacity .4;
-backdrop-filter: blur(16px);
+.nav-btn__prev{
+  position: absolute;
+  left: -50px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: yellow;
 }
 
-.project__data .button{
+.nav-btn__next{
+  position: absolute;
+  right: -50px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: yellow;
+}
+
+.projects__data{
+  color: var(--first-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: hsla(var(--hue), 0, 0, .5);
+  display: grid;
+  place-content: center;
+  row-gap: 1.5rem;
+  text-align: center;
+  padding: 0 1rem;
+  border-radius: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s;
+  backdrop-filter: blur(16px);
+  height: 100%;
+}
+
+.projects__data .button{
   justify-self: center;
-
+}
+.projects__img{
+  width: 100%;
 }
 
-.project__card:hover .project__data{
+.project__card:hover .projects__data{
   opacity: 1;
   pointer-events: initial;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /*=============== RESUME ===============*/
 
-
 /*=============== CONTACT ===============*/
-
 .contact__container{
   row-gap: 4rem;
-
 }
+
 .contact__form{
   position: relative;
   row-gap: 2rem;
 }
+
 .contact__input{
   width: 100%;
   background-color: var(--body-color);
@@ -479,13 +510,16 @@ backdrop-filter: blur(16px);
   color: hsla(180, 93%, 63%, 0.301);
   transition: color .4s;
 }
+
 .contact__input:focus::placeholder{
   color: var(--second-color);
 }
+
 .contact__area{
   height: 10rem;
   resize: none;
 }
+
 .contact__form .button{
   cursor: pointer;
 }
@@ -493,59 +527,81 @@ backdrop-filter: blur(16px);
 .contact__message{
   font-size: var(--font-medium);
 }
+
 /*=============== FOOTER ===============*/
-
-
+footer{
+  font-size: x-small;
+}
 /*=============== SCROLL BAR ===============*/
-
 
 /*=============== SCROLL UP ===============*/
 
-
 /* Show Scroll Up */
-
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (min-width:540px) {
-.home__container,
-.about__container,
-.projects__container{
-  grid-template-columns: 400px;
-  justify-content: center;
-} 
+  .home__container,
+  .about__container{
+    grid-template-columns: 400px;
+    justify-content: center;
+  } 
 
-.home__image,.about__image{
-  width: 240px;
-  height: 240px;
-}
+  .home__image,.about__image{
+    width: 240px;
+    height: 240px;
+  }
 
-.home__img, .about__image{
-  width: 170px;
-}
-
+  .home__img, .about__image{
+    width: 170px;
+  }
 }
 
 /* For medium devices */
 @media screen and (min-width:768px) {
-.home__container,
-.about__container,
-.projects__container{
-  grid-template-columns: repeat(2, 350px);
-  justify-content: center;
-}
+/* Slider kikapcsolása, Grid visszakapcsolása */
+  #projects__wrapper {
+    max-width: initial;
+    display: block; 
+  }
 
-.home__data{
-  text-align:initial;
-}
+  #slider {
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    gap: 1.5rem;
+    justify-content: center;
+    transform: none !important; /* Letiltjuk a lapozást asztali nézetben */
+  }
+
+  .project__card {
+    min-width: initial;
+  }
+
+  .nav-btn__prev,
+  .nav-btn__next {
+    display: none; /* Desktopon nincs szükség a nyilakra */
+  }
+
+  .home__container,
+  .about__container{
+    grid-template-columns: repeat(2, 350px);
+    justify-content: center;
+  }
+
+  .home__data{
+    text-align:initial;
+  }
 }
 
 /* For large devices */
 @media screen and (min-width: 1150px ) {
+  #slider{
+    grid-template-columns: repeat(3, 350px);
+    row-gap: 1.5rem;
+  }
   .container{
     margin-inline: auto;
   }
-
 
   .nav__toggle,
   .nav__close{
@@ -557,30 +613,26 @@ backdrop-filter: blur(16px);
     column-gap: 4rem;
   }
 
-.home__container{
-  grid-template-columns: 400px 480px;
-  justify-content: center;
-}  
+  .home__container{
+    grid-template-columns: 400px 480px;
+    justify-content: center;
+  }  
 
-.about__container{
-  grid-template-columns: 540px 400px;
-  padding-block: 3rem 2rem;
-  column-gap: 3rem;
-}
+  .about__container{
+    grid-template-columns: 540px 400px;
+    padding-block: 3rem 2rem;
+    column-gap: 3rem;
+  }
 
-.home__image,.about__image{
-  width: 340px;
-  height: 340px;
-  
-}
+  .home__image,.about__image{
+    width: 340px;
+    height: 340px;
+  }
 
-.home__img, .about__image{
-  width: 270px;
+  .home__img, .about__image{
+    width: 270px;
     transform: scale(1.3) translateY(35px) translateX(-5px);
-}
-
-
-
+  }
 }
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
